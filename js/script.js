@@ -7,6 +7,10 @@
 (function () {
   "use strict";
 
+  /* Must match the navigation breakpoint in css/style.css. Above this width
+     the links sit in the header; below it they collapse into the menu panel. */
+  var NAV_BREAKPOINT = 980;
+
   /* ------------------------------------------------------------------
      1. MOBILE NAVIGATION
      The button controls both the CSS class that shows the panel and the
@@ -52,7 +56,7 @@
     // Reset the menu when the viewport grows back to desktop width, so it is
     // never left in a half-open state.
     window.addEventListener("resize", function () {
-      if (window.innerWidth > 860 && isMenuOpen()) {
+      if (window.innerWidth > NAV_BREAKPOINT && isMenuOpen()) {
         setMenu(false);
       }
     });
@@ -110,7 +114,38 @@
   }
 
   /* ------------------------------------------------------------------
-     4. FOOTER YEAR
+     4. SCROLL REVEAL
+     Fades each section in as it first comes into view. Skipped entirely
+     when the visitor has asked for reduced motion, and skipped if
+     IntersectionObserver is unavailable, so content is never left hidden.
+     ------------------------------------------------------------------ */
+  var prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  var revealTargets = document.querySelectorAll("[data-reveal]");
+
+  if (!prefersReducedMotion && "IntersectionObserver" in window) {
+    var revealObserver = new IntersectionObserver(
+      function (entries, obs) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          entry.target.classList.add("is-revealed");
+          // Reveal once, then stop watching that element.
+          obs.unobserve(entry.target);
+        });
+      },
+      { rootMargin: "0px 0px -8% 0px", threshold: 0.05 }
+    );
+
+    Array.prototype.forEach.call(revealTargets, function (el) {
+      el.classList.add("reveal");
+      revealObserver.observe(el);
+    });
+  }
+
+  /* ------------------------------------------------------------------
+     5. FOOTER YEAR
      Keeps the copyright year correct without editing the HTML each year.
      ------------------------------------------------------------------ */
   var yearEl = document.getElementById("footer-year");

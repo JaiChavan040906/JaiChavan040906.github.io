@@ -173,6 +173,19 @@ h3 {
   color: #fff;
 }
 
+/* Scroll reveal. The .reveal class is added by script.js, so if JavaScript is
+   unavailable the content simply renders normally and is never left hidden. */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+
+.reveal.is-revealed {
+  opacity: 1;
+  transform: none;
+}
+
 /* Visually hidden, but still announced by screen readers. */
 .visually-hidden {
   position: absolute;
@@ -290,7 +303,8 @@ h3 {
   font-weight: 600;
 }
 
-/* --- Hamburger button: hidden on desktop, shown under 860px --- */
+/* --- Hamburger button: hidden on desktop, shown under 980px.
+       980px is where the nine nav links stop fitting beside the brand. --- */
 .nav__toggle {
   display: none;
   flex-direction: column;
@@ -990,7 +1004,7 @@ h3 {
 }
 
 /* Tablet and below: the horizontal menu becomes a drop-down panel. */
-@media (max-width: 860px) {
+@media (max-width: 980px) {
   .nav__toggle {
     display: flex;
     order: 2;
@@ -1073,5 +1087,21 @@ h3 {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+
+  /* Belt and braces: script.js already skips the reveal under reduced motion,
+     but this guarantees the content is visible even if the class is applied. */
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Remove the lift on hover, which is motion too. */
+  .btn:hover,
+  .card:hover,
+  .project:hover,
+  .cert:hover,
+  .skill-group:hover {
+    transform: none;
   }
 }

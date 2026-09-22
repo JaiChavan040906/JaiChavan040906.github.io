@@ -52,9 +52,59 @@
 
     <!-- ============================== HERO ============================== -->
     <section class="section section--hero" id="home">
-      <div class="container">
-        <h1>Home</h1>
-        <!-- Content added in Stage 2 -->
+      <div class="container hero">
+        <div class="hero__content">
+          <p class="hero__eyebrow">Hi, I&rsquo;m</p>
+          <h1 class="hero__name">Jai Chavan</h1>
+          <p class="hero__role">B.Tech Computer Engineering Student</p>
+          <p class="hero__intro">
+            Computer Engineering undergraduate passionate about building creative and
+            meaningful tech experiences. Skilled in Java, Python and web development,
+            with growing work in data analysis and machine learning. Experienced in
+            leading technical teams and turning ideas into real products.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#projects">View My Projects</a>
+            <a class="btn btn--secondary" href="assets/documents/Jai_Chavan_Resume.pdf"
+              download="Jai_Chavan_Resume.pdf">Download Resume</a>
+          </div>
+
+          <ul class="hero__social">
+            <li>
+              <a class="social-link" href="https://github.com/JaiChavan040906" target="_blank" rel="noopener noreferrer">
+                <svg class="social-link__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path fill="currentColor"
+                    d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.26 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z" />
+                </svg>
+                <span>GitHub</span>
+              </a>
+            </li>
+            <li>
+              <a class="social-link" href="https://www.linkedin.com/in/jaichvn" target="_blank" rel="noopener noreferrer">
+                <svg class="social-link__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path fill="currentColor"
+                    d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14Zm1.78 13.02H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0Z" />
+                </svg>
+                <span>LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a class="social-link" href="mailto:jai.work.0409@gmail.com">
+                <svg class="social-link__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path fill="currentColor"
+                    d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4.24-8 4.76-8-4.76V6l8 4.75L20 6v2.24Z" />
+                </svg>
+                <span>Email</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero__figure">
+          <img class="hero__photo" src="assets/images/jai-chavan.jpg"
+            alt="Portrait of Jai Chavan wearing a navy blazer over a light blue shirt" width="760" height="950">
+        </div>
       </div>
     </section>
 
@@ -62,7 +112,53 @@
     <section class="section" id="about">
       <div class="container">
         <h2 class="section__title">About Me</h2>
-        <!-- Content added in Stage 2 -->
+
+        <div class="about">
+          <div class="about__text">
+            <p>
+              I am a Computer Engineering undergraduate with strong programming skills in
+              Java and Python, along with knowledge of web development and databases.
+              I enjoy leading technical teams, developing software projects and
+              contributing to technical events and website development.
+            </p>
+            <p>
+              Alongside my core programming work, I am currently building my skills in
+              data analysis and machine learning, applying Python libraries such as NumPy,
+              pandas and Matplotlib to real datasets. I also serve on the technical
+              committee of the Computer Society of India chapter at my college, where I
+              help plan and run events for fellow students.
+            </p>
+            <p>
+              I am motivated by problem-solving and by the process of taking an idea from
+              a rough concept through to something people can actually use.
+            </p>
+          </div>
+
+          <aside class="about__facts" aria-label="Quick facts">
+            <dl class="facts">
+              <div class="facts__row">
+                <dt class="facts__key">Location</dt>
+                <dd class="facts__value">Mumbai, Maharashtra, India</dd>
+              </div>
+              <div class="facts__row">
+                <dt class="facts__key">Degree</dt>
+                <dd class="facts__value">B.Tech Computer Engineering</dd>
+              </div>
+              <div class="facts__row">
+                <dt class="facts__key">Institute</dt>
+                <dd class="facts__value">Vidyalankar Institute of Technology</dd>
+              </div>
+              <div class="facts__row">
+                <dt class="facts__key">Focus</dt>
+                <dd class="facts__value">Software Development, Data &amp; Machine Learning</dd>
+              </div>
+              <div class="facts__row">
+                <dt class="facts__key">Languages</dt>
+                <dd class="facts__value">English, Hindi, Marathi</dd>
+              </div>
+            </dl>
+          </aside>
+        </div>
       </div>
     </section>
 
@@ -70,7 +166,32 @@
     <section class="section section--alt" id="education">
       <div class="container">
         <h2 class="section__title">Education</h2>
-        <!-- Content added in Stage 2 -->
+
+        <ol class="timeline">
+          <li class="timeline__item">
+            <article class="card card--education">
+              <p class="card__period">2024 &ndash; 2028</p>
+              <h3 class="card__title">B.Tech in Computer Engineering</h3>
+              <p class="card__org">Vidyalankar Institute of Technology, Mumbai</p>
+              <p class="card__note">
+                Currently pursuing. Coursework spans data structures and algorithms,
+                object-oriented programming, database management, operating systems and
+                web technologies.
+              </p>
+            </article>
+          </li>
+
+          <li class="timeline__item">
+            <article class="card card--education">
+              <p class="card__period">2022 &ndash; 2024</p>
+              <h3 class="card__title">Higher Secondary Certificate (12th)</h3>
+              <p class="card__org">Vidyaniketan College of Science</p>
+              <p class="card__note">
+                Science stream, completed prior to joining the engineering programme.
+              </p>
+            </article>
+          </li>
+        </ol>
       </div>
     </section>
 

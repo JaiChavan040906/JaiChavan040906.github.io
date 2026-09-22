@@ -329,7 +329,265 @@ h3 {
 }
 
 /* --------------------------------------------------------------------------
-   6. FOOTER
+   6. BUTTONS (shared across sections)
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  padding: 0.7rem 1.4rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color var(--transition), color var(--transition),
+    border-color var(--transition), transform var(--transition);
+}
+
+.btn--primary {
+  background-color: var(--color-accent);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background-color: var(--color-accent-dark);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn--secondary {
+  background-color: transparent;
+  border-color: var(--color-border);
+  color: var(--color-ink);
+}
+
+.btn--secondary:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   7. HERO
+   -------------------------------------------------------------------------- */
+.section--hero {
+  /* Fills the first screen so the hero reads as a proper landing area. */
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - var(--header-height));
+  padding-block: var(--space-xl);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: var(--space-2xl);
+}
+
+.hero__eyebrow {
+  margin-bottom: var(--space-xs);
+  font-size: var(--text-lg);
+  font-weight: 500;
+  color: var(--color-muted);
+}
+
+.hero__name {
+  margin-bottom: var(--space-xs);
+}
+
+.hero__role {
+  margin-bottom: var(--space-md);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.hero__intro {
+  max-width: 54ch;
+  font-size: var(--text-lg);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+}
+
+.hero__social {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-body);
+}
+
+.social-link:hover {
+  color: var(--color-accent);
+}
+
+.social-link__icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* --- Portrait --- */
+.hero__figure {
+  position: relative;
+  justify-self: center;
+  max-width: 340px;
+}
+
+/* Offset accent frame behind the photo, for a little depth without effects. */
+.hero__figure::before {
+  content: "";
+  position: absolute;
+  inset: 14px -14px -14px 14px;
+  border: 2px solid var(--color-accent);
+  border-radius: var(--radius-lg);
+  opacity: 0.35;
+}
+
+.hero__photo {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+/* --------------------------------------------------------------------------
+   8. ABOUT
+   -------------------------------------------------------------------------- */
+.about {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--space-2xl);
+  align-items: start;
+}
+
+.about__text p + p {
+  margin-top: var(--space-md);
+}
+
+.about__facts {
+  padding: var(--space-lg);
+  background-color: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.facts__row + .facts__row {
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.facts__key {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.facts__value {
+  margin: 2px 0 0;
+  font-weight: 500;
+  color: var(--color-ink);
+}
+
+/* --------------------------------------------------------------------------
+   9. TIMELINE AND CARDS (used by Education, and later Experience)
+   -------------------------------------------------------------------------- */
+.timeline {
+  position: relative;
+  display: grid;
+  gap: var(--space-lg);
+  padding-left: var(--space-lg);
+}
+
+/* The vertical rail running down the left of the timeline. */
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 5px;
+  width: 2px;
+  background-color: var(--color-border);
+}
+
+.timeline__item {
+  position: relative;
+}
+
+/* The dot sitting on the rail beside each entry. */
+.timeline__item::before {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: calc(var(--space-lg) * -1);
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--color-accent);
+  border-radius: 50%;
+  background-color: var(--color-surface);
+}
+
+.card {
+  padding: var(--space-lg);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.card__period {
+  margin-bottom: var(--space-xs);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.card__title {
+  margin-bottom: 2px;
+}
+
+.card__org {
+  margin-bottom: var(--space-sm);
+  font-weight: 500;
+  color: var(--color-muted);
+}
+
+.card__note {
+  font-size: var(--text-sm);
+}
+
+/* --------------------------------------------------------------------------
+   10. FOOTER
    -------------------------------------------------------------------------- */
 .site-footer {
   padding-block: var(--space-lg);
@@ -364,8 +622,32 @@ h3 {
 }
 
 /* --------------------------------------------------------------------------
-   7. RESPONSIVE
+   11. RESPONSIVE
    -------------------------------------------------------------------------- */
+
+/* Stack the two-column layouts before they get too cramped. */
+@media (max-width: 900px) {
+  .section--hero {
+    min-height: 0;
+  }
+
+  .hero,
+  .about {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  /* Photo above the text reads better on a narrow screen. */
+  .hero__content {
+    order: 2;
+  }
+
+  .hero__figure {
+    order: 1;
+    max-width: 260px;
+    justify-self: start;
+  }
+}
 
 /* Tablet and below: the horizontal menu becomes a drop-down panel. */
 @media (max-width: 860px) {
@@ -418,10 +700,24 @@ h3 {
     flex-direction: column;
     align-items: flex-start;
   }
+
+  /* Full-width buttons are easier to tap on a phone. */
+  .hero__actions .btn {
+    width: 100%;
+  }
+
+  .hero__social {
+    gap: var(--space-sm) var(--space-md);
+  }
+
+  .about__facts,
+  .card {
+    padding: var(--space-md);
+  }
 }
 
 /* --------------------------------------------------------------------------
-   8. REDUCED MOTION
+   12. REDUCED MOTION
    Honours the operating-system setting for users who find motion
    uncomfortable: all transitions and smooth scrolling are switched off.
    -------------------------------------------------------------------------- */

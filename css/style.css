@@ -647,7 +647,70 @@ h3 {
 }
 
 /* --------------------------------------------------------------------------
-   11. FOOTER
+   11. EXPERIENCE (extends the timeline and card components above)
+   -------------------------------------------------------------------------- */
+
+/* Period and role-type tag sit on one line, wrapping on narrow screens. */
+.card__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-xs);
+}
+
+.card__head .card__period {
+  margin-bottom: 0;
+}
+
+/* Labels the nature of a role, so a student committee position is never
+   mistaken for corporate employment. */
+.tag {
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.tag--leadership {
+  background-color: #eef0fb;
+  color: #3f4aa3;
+}
+
+.tag--internship {
+  background-color: var(--color-accent-soft);
+  color: var(--color-accent-dark);
+}
+
+.bullets {
+  margin-top: var(--space-sm);
+  display: grid;
+  gap: 0.35rem;
+  font-size: var(--text-sm);
+}
+
+.bullets li {
+  position: relative;
+  padding-left: 1.1rem;
+}
+
+.bullets li::before {
+  content: "";
+  position: absolute;
+  top: 0.62em;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+}
+
+/* --------------------------------------------------------------------------
+   12. FOOTER
    -------------------------------------------------------------------------- */
 .site-footer {
   padding-block: var(--space-lg);
@@ -682,7 +745,7 @@ h3 {
 }
 
 /* --------------------------------------------------------------------------
-   12. RESPONSIVE
+   13. RESPONSIVE
    -------------------------------------------------------------------------- */
 
 /* Stack the two-column layouts before they get too cramped. */
@@ -777,7 +840,7 @@ h3 {
 }
 
 /* --------------------------------------------------------------------------
-   13. REDUCED MOTION
+   14. REDUCED MOTION
    Honours the operating-system setting for users who find motion
    uncomfortable: all transitions and smooth scrolling are switched off.
    -------------------------------------------------------------------------- */

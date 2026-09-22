@@ -710,7 +710,107 @@ h3 {
 }
 
 /* --------------------------------------------------------------------------
-   12. FOOTER
+   12. PROJECTS
+   -------------------------------------------------------------------------- */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: var(--space-md);
+}
+
+.project {
+  /* Flex column so the tech chips and links sit at the bottom of every card,
+     keeping a tidy baseline however long the description runs. */
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-lg);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.project:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.project__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-sm);
+}
+
+.project__title {
+  font-size: var(--text-lg);
+  font-weight: 700;
+}
+
+.project__desc {
+  font-size: var(--text-sm);
+}
+
+.chips--tech {
+  margin-top: auto;
+  padding-top: var(--space-md);
+}
+
+.chips--tech .chip {
+  background-color: var(--color-surface-alt);
+  border-color: var(--color-border);
+  color: var(--color-body);
+  font-size: 0.78rem;
+}
+
+.project__note {
+  margin-top: var(--space-md);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-border);
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--color-muted);
+}
+
+.project__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-border);
+}
+
+.project__link {
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+/* Small arrow cue that nudges right on hover. */
+.project__link::after {
+  content: " \2192";
+  display: inline-block;
+  transition: transform var(--transition);
+}
+
+.project__link:hover::after {
+  transform: translateX(3px);
+}
+
+.tag--ongoing {
+  background-color: #fff3e0;
+  color: #9a5b00;
+}
+
+.tag--award {
+  background-color: #fdf0d5;
+  color: #8a5a00;
+}
+
+/* --------------------------------------------------------------------------
+   13. FOOTER
    -------------------------------------------------------------------------- */
 .site-footer {
   padding-block: var(--space-lg);
@@ -745,7 +845,7 @@ h3 {
 }
 
 /* --------------------------------------------------------------------------
-   13. RESPONSIVE
+   14. RESPONSIVE
    -------------------------------------------------------------------------- */
 
 /* Stack the two-column layouts before they get too cramped. */
@@ -840,7 +940,7 @@ h3 {
 }
 
 /* --------------------------------------------------------------------------
-   14. REDUCED MOTION
+   15. REDUCED MOTION
    Honours the operating-system setting for users who find motion
    uncomfortable: all transitions and smooth scrolling are switched off.
    -------------------------------------------------------------------------- */

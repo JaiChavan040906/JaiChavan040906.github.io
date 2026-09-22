@@ -365,7 +365,221 @@
     <section class="section" id="projects">
       <div class="container">
         <h2 class="section__title">Projects</h2>
-        <!-- Content added in Stage 5 -->
+        <p class="section__lead">
+          A selection of academic, competition and self-directed work.
+        </p>
+
+        <div class="projects">
+
+          <!-- OceanEmbed -->
+          <article class="project">
+            <div class="project__head">
+              <h3 class="project__title">OceanEmbed</h3>
+              <span class="tag tag--ongoing">Ongoing</span>
+            </div>
+            <p class="project__desc">
+              An AI-driven ocean analytics project that aims to reconstruct subsurface
+              ocean temperatures from satellite-observed surface conditions, from the
+              surface down to roughly 2,000 metres. It combines sea-surface temperature,
+              salinity, sea-level anomaly, ocean currents and wind data, using Python-based
+              preprocessing, geospatial alignment and machine-learning techniques to
+              support ocean monitoring and climate-related research.
+            </p>
+            <ul class="chips chips--tech">
+              <li class="chip">Python</li>
+              <li class="chip">NumPy</li>
+              <li class="chip">pandas</li>
+              <li class="chip">Xarray</li>
+              <li class="chip">NetCDF</li>
+              <li class="chip">Machine Learning</li>
+              <li class="chip">Satellite Data</li>
+            </ul>
+            <p class="project__note">Repository not yet public &mdash; work in progress.</p>
+          </article>
+
+          <!-- PhishLens -->
+          <article class="project">
+            <div class="project__head">
+              <h3 class="project__title">PhishLens</h3>
+              <span class="tag tag--award">Hackathon Winner</span>
+            </div>
+            <p class="project__desc">
+              An explainable phishing-detection dashboard built for college students during
+              a TCS hackathon. It blends a Random Forest classifier, a weighted keyword
+              engine and link-reputation analysis into a single traceable risk score, then
+              surfaces concrete evidence such as impersonated senders, shortened links and
+              urgency or payment language. A language-model layer narrates the verdict in
+              plain English without influencing it, so every point of the score traces back
+              to something visible in the email.
+            </p>
+            <ul class="chips chips--tech">
+              <li class="chip">Python</li>
+              <li class="chip">scikit-learn</li>
+              <li class="chip">FastAPI</li>
+              <li class="chip">pandas</li>
+              <li class="chip">NumPy</li>
+              <li class="chip">Machine Learning</li>
+            </ul>
+            <p class="project__links">
+              <a class="project__link" href="https://github.com/Maitrey-Bharambe/agentictcs" target="_blank"
+                rel="noopener noreferrer">View code<span class="visually-hidden"> for PhishLens</span></a>
+            </p>
+          </article>
+
+          <!-- Paraallax -->
+          <article class="project">
+            <div class="project__head">
+              <h3 class="project__title">Paraallax</h3>
+            </div>
+            <p class="project__desc">
+              A terminal-themed, team-based escape-room puzzle platform built for the CSI
+              Enthusia event. Features randomised puzzle assignment, admin-controlled game
+              rounds, penalty-based timer logic and a live leaderboard driven by polling.
+            </p>
+            <ul class="chips chips--tech">
+              <li class="chip">Next.js</li>
+              <li class="chip">JavaScript</li>
+              <li class="chip">MongoDB</li>
+              <li class="chip">Tailwind CSS</li>
+            </ul>
+            <p class="project__links">
+              <a class="project__link" href="https://github.com/JaiChavan040906/Paraallax" target="_blank"
+                rel="noopener noreferrer">View code<span class="visually-hidden"> for Paraallax</span></a>
+              <a class="project__link" href="https://paraallax.vercel.app" target="_blank"
+                rel="noopener noreferrer">Live demo<span class="visually-hidden"> of Paraallax</span></a>
+            </p>
+          </article>
+
+          <!-- Hybrid CPU Scheduler -->
+          <article class="project">
+            <div class="project__head">
+              <h3 class="project__title">Hybrid CPU Scheduling Simulator</h3>
+            </div>
+            <p class="project__desc">
+              A step-by-step CPU scheduling simulator built for Operating Systems coursework.
+              It implements a Multi-Level Feedback Queue combining preemptive priority
+              scheduling, Round Robin and FCFS across three tiers, with event-based aging to
+              prevent starvation, and animates the Gantt chart and queues as they build.
+            </p>
+            <ul class="chips chips--tech">
+              <li class="chip">Python</li>
+              <li class="chip">Flask</li>
+              <li class="chip">JavaScript</li>
+              <li class="chip">OS Concepts</li>
+              <li class="chip">Data Structures</li>
+            </ul>
+            <p class="project__links">
+              <a class="project__link" href="https://github.com/JaiChavan040906/Hybrid_CPU_Scheduler-" target="_blank"
+                rel="noopener noreferrer">View code<span class="visually-hidden"> for the CPU scheduling simulator</span></a>
+              <a class="project__link" href="https://hybrid-cpu-scheduler.vercel.app" target="_blank"
+                rel="noopener noreferrer">Live demo<span class="visually-hidden"> of the CPU scheduling simulator</span></a>
+            </p>
+          </article>
+
+          <!-- Hospital Event Simulation -->
+          <article class="project">
+            <div class="project__head">
+              <h3 class="project__title">Hospital Event Simulation</h3>
+            </div>
+            <p class="project__desc">
+              An event-driven hospital operations and care-coordination platform, built as
+              the final project for cloud computing coursework. A FastAPI backend and React
+              front end are combined with AWS services for queuing, storage, compute and
+              monitoring, with JWT-based authentication.
+            </p>
+            <ul class="chips chips--tech">
+              <li class="chip">Python</li>
+              <li class="chip">FastAPI</li>
+              <li class="chip">React</li>
+              <li class="chip">AWS</li>
+              <li class="chip">SQLAlchemy</li>
+              <li class="chip">Cloud Computing</li>
+            </ul>
+            <p class="project__links">
+              <a class="project__link" href="https://github.com/JaiChavan040906/Cloud_Project_Final" target="_blank"
+                rel="noopener noreferrer">View code<span class="visually-hidden"> for the hospital event simulation</span></a>
+            </p>
+          </article>
+
+          <!-- Janvaani -->
+          <article class="project">
+            <div class="project__head">
+              <h3 class="project__title">Janvaani</h3>
+            </div>
+            <p class="project__desc">
+              A citizen complaint and feedback platform developed for the Smart India
+              Hackathon. It lets users raise civic issues, track their resolution status and
+              communicate more transparently with the relevant authorities.
+            </p>
+            <ul class="chips chips--tech">
+              <li class="chip">HTML</li>
+              <li class="chip">CSS</li>
+              <li class="chip">JavaScript</li>
+              <li class="chip">Python</li>
+              <li class="chip">SQL</li>
+            </ul>
+          </article>
+
+          <!-- AI/ML practice -->
+          <article class="project">
+            <div class="project__head">
+              <h3 class="project__title">AI/ML &amp; Data Analysis Practice</h3>
+            </div>
+            <p class="project__desc">
+              A working repository of notebooks tracking my self-directed study of data
+              analysis and machine learning. Covers NumPy and pandas fundamentals,
+              statistics, regression and classification models such as car-price prediction
+              and the Titanic dataset, ensemble learning, hyperparameter search with
+              GridSearchCV, and an introductory NLP project.
+            </p>
+            <ul class="chips chips--tech">
+              <li class="chip">Python</li>
+              <li class="chip">Jupyter</li>
+              <li class="chip">NumPy</li>
+              <li class="chip">pandas</li>
+              <li class="chip">scikit-learn</li>
+              <li class="chip">NLP</li>
+            </ul>
+            <p class="project__links">
+              <a class="project__link" href="https://github.com/JaiChavan040906/AIML_JAI" target="_blank"
+                rel="noopener noreferrer">View code<span class="visually-hidden"> for the AI/ML practice repository</span></a>
+            </p>
+          </article>
+
+          <!-- Email Administration Application -->
+          <article class="project">
+            <div class="project__head">
+              <h3 class="project__title">Email Administration Application</h3>
+            </div>
+            <p class="project__desc">
+              A Java application that generates official email accounts for employees.
+              Implements department-based email creation, password generation and mailbox
+              capacity management, built around OOP concepts such as classes, encapsulation
+              and constructors.
+            </p>
+            <ul class="chips chips--tech">
+              <li class="chip">Java</li>
+              <li class="chip">OOP</li>
+            </ul>
+          </article>
+
+          <!-- AI Chatbot -->
+          <article class="project">
+            <div class="project__head">
+              <h3 class="project__title">Rule-Based AI Chatbot</h3>
+            </div>
+            <p class="project__desc">
+              A Java chatbot for interactive communication, using keyword-matching logic to
+              produce automated responses through a simple real-time interface.
+            </p>
+            <ul class="chips chips--tech">
+              <li class="chip">Java</li>
+              <li class="chip">String Processing</li>
+              <li class="chip">Algorithms</li>
+            </ul>
+          </article>
+
+        </div>
       </div>
     </section>
 

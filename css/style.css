@@ -15,8 +15,8 @@
   /* headings, primary text */
   --color-body: #44546a;
   /* paragraph text */
-  --color-muted: #6b7a90;
-  /* captions, dates */
+  --color-muted: #5c6a80;
+  /* captions, dates - darkened to meet WCAG AA (5.1:1) on the tinted background */
   --color-accent: #0e7c86;
   /* links, buttons, highlights */
   --color-accent-dark: #0a5d65;
@@ -617,7 +617,7 @@ h3 {
    so no extra breakpoints are needed for this grid. */
 .skills {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(270px, 100%), 1fr));
   gap: var(--space-md);
 }
 
@@ -728,7 +728,7 @@ h3 {
    -------------------------------------------------------------------------- */
 .projects {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(310px, 100%), 1fr));
   gap: var(--space-md);
 }
 
@@ -842,7 +842,7 @@ h3 {
 
 .cert-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
   gap: var(--space-md);
 }
 
@@ -912,7 +912,7 @@ h3 {
    -------------------------------------------------------------------------- */
 .contact-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
   gap: var(--space-md);
 }
 

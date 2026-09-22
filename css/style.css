@@ -587,7 +587,67 @@ h3 {
 }
 
 /* --------------------------------------------------------------------------
-   10. FOOTER
+   10. SKILLS
+   -------------------------------------------------------------------------- */
+
+/* Short introductory line used under a section heading. */
+.section__lead {
+  max-width: 62ch;
+  margin-top: calc(var(--space-xl) * -1 + var(--space-md));
+  margin-bottom: var(--space-xl);
+  font-size: var(--text-lg);
+  color: var(--color-muted);
+}
+
+/* auto-fit lets the number of columns fall from 3 to 2 to 1 on its own,
+   so no extra breakpoints are needed for this grid. */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: var(--space-md);
+}
+
+.skill-group {
+  padding: var(--space-lg);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.skill-group:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.skill-group__title {
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-xs);
+  font-size: var(--text-base);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.chip {
+  padding: 0.35rem 0.75rem;
+  background-color: var(--color-accent-soft);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-accent-dark);
+}
+
+/* --------------------------------------------------------------------------
+   11. FOOTER
    -------------------------------------------------------------------------- */
 .site-footer {
   padding-block: var(--space-lg);
@@ -622,7 +682,7 @@ h3 {
 }
 
 /* --------------------------------------------------------------------------
-   11. RESPONSIVE
+   12. RESPONSIVE
    -------------------------------------------------------------------------- */
 
 /* Stack the two-column layouts before they get too cramped. */
@@ -717,7 +777,7 @@ h3 {
 }
 
 /* --------------------------------------------------------------------------
-   12. REDUCED MOTION
+   13. REDUCED MOTION
    Honours the operating-system setting for users who find motion
    uncomfortable: all transitions and smooth scrolling are switched off.
    -------------------------------------------------------------------------- */

@@ -810,7 +810,124 @@ h3 {
 }
 
 /* --------------------------------------------------------------------------
-   13. FOOTER
+   13. CERTIFICATIONS AND ACHIEVEMENTS
+   -------------------------------------------------------------------------- */
+.subsection__title {
+  margin-bottom: var(--space-md);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Space between the achievements block and the certifications block. */
+.cert-grid + .subsection__title {
+  margin-top: var(--space-xl);
+}
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-md);
+}
+
+.cert {
+  padding: var(--space-md) var(--space-lg);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-accent);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.cert:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* The award uses a warmer edge so it reads differently from a certificate. */
+.cert--award {
+  border-left-color: #c98a00;
+}
+
+.cert__title {
+  font-size: var(--text-base);
+  font-weight: 700;
+}
+
+.cert__issuer {
+  margin-top: 2px;
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+.cert__note {
+  margin-top: var(--space-xs);
+  font-size: var(--text-sm);
+}
+
+/* --------------------------------------------------------------------------
+   14. RESUME
+   -------------------------------------------------------------------------- */
+.resume {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+  background-color: var(--color-surface-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+.resume__text {
+  max-width: 52ch;
+}
+
+.resume__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+/* --------------------------------------------------------------------------
+   15. CONTACT
+   -------------------------------------------------------------------------- */
+.contact-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-md);
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--space-md);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.contact-item__label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.contact-item__value {
+  font-weight: 500;
+  /* Long addresses wrap instead of overflowing on narrow screens. */
+  overflow-wrap: anywhere;
+}
+
+/* --------------------------------------------------------------------------
+   16. FOOTER
    -------------------------------------------------------------------------- */
 .site-footer {
   padding-block: var(--space-lg);
@@ -845,7 +962,7 @@ h3 {
 }
 
 /* --------------------------------------------------------------------------
-   14. RESPONSIVE
+   17. RESPONSIVE
    -------------------------------------------------------------------------- */
 
 /* Stack the two-column layouts before they get too cramped. */
@@ -940,7 +1057,7 @@ h3 {
 }
 
 /* --------------------------------------------------------------------------
-   15. REDUCED MOTION
+   18. REDUCED MOTION
    Honours the operating-system setting for users who find motion
    uncomfortable: all transitions and smooth scrolling are switched off.
    -------------------------------------------------------------------------- */
